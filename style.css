@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Header and Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation bar styling */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    background-color: #000; /* Black background for each item */
+}
+
+nav ul li a {
+    display: block;
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Highlight for the active item (Home) */
+nav ul li.active {
+    background-color: #555; /* Gray background for active item */
+}
+
+/* Create the angled separator effect using pseudo-elements */
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background-color: #000; /* Match the background color */
+    transform: skew(-20deg); /* Angle the separator */
+    z-index: 1;
+}
+
+/* Ensure the link text stays above the separator */
+nav ul li a {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover effect */
+nav ul li:hover {
+    background-color: #333; /* Slightly lighter black on hover */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #e9ecef;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.project-item {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Contact Section (in Footer) */
+#contact {
+    padding: 20px;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 14px;
+    color: #555;
+}
+
+#contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
